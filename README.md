@@ -9,6 +9,10 @@
 - Sorter is a straightforward JavaScript library designed for sorting alphabetically, numerically, or sorting HTML select option elements.
 - It draws inspiration from various JavaScript resources and aims to simplify the sorting process within web development.
 
+## Contributing
+- **Sorter** is an open-source project, and contributions are welcome.
+- If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request on the project repository.
+
 ## Requirement
 - **Recommend to use all latest version of browsers**
 - Chrome (v - 97 or later)
