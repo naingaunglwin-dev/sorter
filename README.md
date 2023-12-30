@@ -23,30 +23,82 @@
 
 ## Installation & Setup
 1. Download the zip file from `https://github.com/naingaunglwin-dev/sorter`
-2. Extract the contents of the zip file and copy the sorter.js file to your project directory
-3. Add the following line to your HTML file to include the `sorter.js`
-- script: `<script src="sorter.js"></script>`
+2. Extract the contents of the zip file and copy the sorter.min.js file to your project directory
+3. Add the following line to your HTML file to include the `sorter.min.js`
+- script: `<script src="sorter.min.js"></script>`
 
 ## Usage
-```javascript
-    <select>
-        <option value="one">Mg Mg</option>
-        <option value="two">Kyaw Kyaw</option>
-        <option value="three">Tun Tun</option>
-        <option value="four">Aung Aung</option>
-        <option value="1">David</option>
-        <option value="six">John</option>
-        <option value="2">Ko Ko</option>
-        <option value="eight">Smith</option>
-        <option value="nine">Nyi Nyi</option>
-        <option value="ten">Min Min</option>
-    </select>
 
+- For `number()`
+```javascript
+    <div id="test-1"></div>
+    <div id="test-2"></div>
+    <div id="test-3"></div>
+    <div id="test-4"></div>
+    <div id="test-5"></div>
     <script src="sorter.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+    let id = 1;
+
+    sorter().number([2, 5, 4, 8, 9], 'num-asc').map(e => {
+        document.getElementById(`test-${id}`).innerText = e.toString();
+        id++;
+    });
+</script>
+
+Output :
+    <div id="test-1">2</div>
+    <div id="test-2">4</div>
+    <div id="test-3">5</div>
+    <div id="test-4">8</div>
+    <div id="test-5">9</div>
+```
+
+- For `alphabet()`
+```javascript
+    <div id="test-1"></div>
+    <div id="test-2"></div>
+    <div id="test-3"></div>
+    <div id="test-4"></div>
+    <div id="test-5"></div>
+    <script src="sorter.js"></script>
+<script>
+    let id = 1;
+
+    sorter().alphabet(['mgmg', 'kyawkyaw', 'david', 'tuntun', 'john'], 'alpha-asc').map(e => {
+        document.getElementById(`test-${id}`).innerText = e;
+        id++;
+    });
+</script>
+
+Output :
+    <div id="test-1">david</div>
+    <div id="test-2">john</div>
+    <div id="test-3">kyawkyaw</div>
+    <div id="test-4">mgmg</div>
+    <div id="test-5">tuntun</div>
+```
+
+- For `select()`
+```javascript
+    <select>
+    <option value="one">Mg Mg</option>
+    <option value="two">Kyaw Kyaw</option>
+    <option value="three">Tun Tun</option>
+    <option value="four">Aung Aung</option>
+    <option value="1">David</option>
+    <option value="six">John</option>
+    <option value="2">Ko Ko</option>
+    <option value="eight">Smith</option>
+    <option value="nine">Nyi Nyi</option>
+    <option value="ten">Min Min</option>
+</select>
+
+<script src="sorter.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
     sorter().select('select', 'num-desc-alpha-asc');
-  });
+});
 </script>
 
 Output :
@@ -66,18 +118,18 @@ Output :
 
 ## Allowed Conditions List
 #### num stands for number
-#### a stands for alphabet
+#### alpha stands for alphabet
 #### asc stands for ascending
 #### desc stands for descending
 - num-asc
 - num-desc
-- a-asc
-- a-desc
-- num-asc-a-asc
-- num-asc-a-desc
-- num-desc-a-asc
-- num-desc-a-desc
-- a-asc-num-asc
-- a-asc-num-desc
-- a-desc-num-asc
-- a-desc-num-desc
+- alpha-asc
+- alpha-desc
+- num-asc-alpha-asc
+- num-asc-alpha-desc
+- num-desc-alpha-asc
+- num-desc-alpha-desc
+- alpha-asc-num-asc
+- alpha-asc-num-desc
+- alpha-desc-num-asc
+- alpha-desc-num-desc
