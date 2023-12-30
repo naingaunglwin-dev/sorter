@@ -53,7 +53,7 @@ function sorter()
                 throw new Error('Unsupported Condition Type');
             }
 
-            if (data.every(item => typeof item === 'number' && !Number.isNaN(item))) {
+            if (data.every(item => typeof item === 'number' && Number.isNaN(item))) {
                 throw new Error('Data array must contain only numbers');
             }
 
@@ -82,7 +82,7 @@ function sorter()
                 throw new Error('Unsupported Condition Type');
             }
 
-            if (data.every(item => typeof item === 'string')) {
+            if (data.every(item => typeof item !== 'string')) {
                 throw new Error('Data array must contain only string');
             }
 
