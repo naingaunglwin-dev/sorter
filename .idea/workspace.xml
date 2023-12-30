@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b79b259-ef23-4a4d-a7c9-4a0a3a75ef7c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Sorter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sorter.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorter.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorter.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorter.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +55,7 @@
       <updated>1701008333922</updated>
       <workItem from="1701008335201" duration="7419000" />
       <workItem from="1701019012784" duration="303000" />
-      <workItem from="1703942248790" duration="2457000" />
+      <workItem from="1703942248790" duration="2839000" />
     </task>
     <servers />
   </component>
